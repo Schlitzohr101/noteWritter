@@ -16,16 +16,20 @@ def yesNoQuestion(prompt):
     return ans[0] == 'Y'
 
 online = yesNoQuestion("online? ")
+
 name = input("Name: ")
+while len(name) > 30:
+  print("ENTER THE NAME!")
+  name = input("name: ")
 
 
 def printer(name,list_of_activities):
   print("Hiya,")
   print("Today "+name+" worked on:")
   for activity in list_of_activities:
-    print("\t -",activity)
+    print(" -",activity)
 
-  print("Until next time at the Coder School",end="")
+  print("\nUntil next time at the Coder School",end="")
   print(" online!" if online else "!")
   print("- "+coach+" (Code Coach)")
 
