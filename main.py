@@ -18,7 +18,7 @@ def yesNoQuestion(prompt):
 online = yesNoQuestion("online? ")
 
 name = input("Name: ")
-while len(name) > 30:
+while len(name) > 30 or name == "":
   print("ENTER THE NAME!")
   name = input("name: ")
 
